@@ -1,0 +1,21 @@
+Will compile gNB
+Enabling build of optional shared library nrscope
+OPENAIR_DIR    = /home/tcs/Phani/gNB-CU
+Running "cmake -DOAI_SIMU=ON -GNinja -DENABLE_NRSCOPE=ON ../../.."
+-- Ccache not found. Consider installing it for faster compilation. Command: sudo apt/dnf install ccache
+-- Check if /opt/asn1c/bin/asn1c supports -gen-APER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-UPER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-JER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-BER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-OER
+-- CMAKE_BUILD_TYPE is RelWithDebInfo
+-- CPU architecture is x86_64
+-- AVX512 intrinsics are ON
+-- AVX2 intrinsics are ON
+-- LTTNG support disabled
+-- Checking for module 'cblas'
+--   No package 'cblas' found
+-- No Doxygen documentation requested
+-- No Support for Aerial
+-- libforms library, required for scopes, found at /usr/lib/libforms.so
+-- Configuring done

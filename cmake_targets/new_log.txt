@@ -1,0 +1,279 @@
+Will compile gNB
+Enabling build of optional shared library nrscope
+OPENAIR_DIR    = /home/tcs/Phani/gNB-CU
+Running "cmake -DOAI_SIMU=ON -GNinja -DENABLE_NRSCOPE=ON ../../.."
+-- Ccache not found. Consider installing it for faster compilation. Command: sudo apt/dnf install ccache
+-- Check if /opt/asn1c/bin/asn1c supports -gen-APER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-UPER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-JER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-BER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-OER
+-- CMAKE_BUILD_TYPE is RelWithDebInfo
+-- CPU architecture is x86_64
+-- AVX512 intrinsics are ON
+-- AVX2 intrinsics are ON
+-- LTTNG support disabled
+-- Checking for module 'cblas'
+--   No package 'cblas' found
+-- No Doxygen documentation requested
+-- No Support for Aerial
+-- libforms library, required for scopes, found at /usr/lib/libforms.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build
+cd /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build
+Running "cmake --build .  --target  rfsimulator nr-softmodem nr-cuup nrscope params_libconfig coding rfsimulator dfts params_yaml vrtsim -- -j8"
+Log file for compilation is being written to: /home/tcs/Phani/gNB-CU/cmake_targets/log/all.txt
+[57/1581] Building C object openair2/F1AP/MESSAGES/CMakeFiles/asn1_f1ap.dir/F1AP_DRBs-FailedToBeModified-List.c.o
+[58/1581] Building C object openair2/F1AP/lib/CMakeFiles/f1ap_lib.dir/f1ap_ue_context.c.o
+FAILED: openair2/F1AP/lib/CMakeFiles/f1ap_lib.dir/f1ap_ue_context.c.o 
+/usr/bin/cc -DAVX2 -DAVX512 -DCMAKE_BUILD_TYPE=\"RelWithDebInfo\" -DHAVE_NETINET_IN_H -DMAX_NUM_CCs=1 -DNAS_BUILT_IN_UE -DNB_ANTENNAS_RX=4 -DNB_ANTENNAS_TX=4 -DNUMBER_OF_UE_MAX_NB_IoT=16 -DRRC_DEFAULT_RAB_IS_AM -DSTDC_HEADERS="1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_FCNTL_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_SYS_SOCKET_H=1 -DHAVE_STRERROR=1 -DHAVE_SOCKET=1 -DHAVE_MEMSET=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_LIBSCTP" -DT_TRACER -I/home/tcs/Phani/gNB-CU/openair3/S1AP -I/home/tcs/Phani/gNB-CU/openair3/NGAP -I/home/tcs/Phani/gNB-CU/openair2/X2AP -I/home/tcs/Phani/gNB-CU/radio/COMMON -I/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build -I/home/tcs/Phani/gNB-CU/executables -I/home/tcs/Phani/gNB-CU/openair2/COMMON -I/home/tcs/Phani/gNB-CU/openair2/UTIL -I/home/tcs/Phani/gNB-CU/openair2/UTIL/LOG -I/home/tcs/Phani/gNB-CU/openair3/COMMON -I/home/tcs/Phani/gNB-CU/openair3/UTILS -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/nfapi/public_inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/common/public_inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/pnf/public_inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/nfapi/inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/sim_common/inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/pnf_sim/inc -I/home/tcs/Phani/gNB-CU/openair1 -I/home/tcs/Phani/gNB-CU/openair2 -I/home/tcs/Phani/gNB-CU/openair3/NAS/TOOLS -I/home/tcs/Phani/gNB-CU/openair2/ENB_APP -I/home/tcs/Phani/gNB-CU/openair2/GNB_APP -I/home/tcs/Phani/gNB-CU/openair2/MCE_APP -I/home/tcs/Phani/gNB-CU/openair2/LAYER2/RLC -I/home/tcs/Phani/gNB-CU/openair2/LAYER2/PDCP_v10.1.0 -I/home/tcs/Phani/gNB-CU/openair2/RRC/LTE/MESSAGES -I/home/tcs/Phani/gNB-CU/openair2/RRC/LTE -I/home/tcs/Phani/gNB-CU/common/utils -I/home/tcs/Phani/gNB-CU/common/utils/collection -I/home/tcs/Phani/gNB-CU/common/utils/ocp_itti -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON/API/NETWORK -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON/EMM/MSG -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON/ESM/MSG -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/ESM -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/EMM -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/API/USER -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON/IES -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON/UTIL -I/home/tcs/Phani/gNB-CU/openair3/SECU -I/home/tcs/Phani/gNB-CU/openair3/SCTP -I/home/tcs/Phani/gNB-CU/openair2/M2AP -I/home/tcs/Phani/gNB-CU/openair2/F1AP -I/home/tcs/Phani/gNB-CU/openair3/ocp-gtpu -I/home/tcs/Phani/gNB-CU/openair3/M3AP -I/home/tcs/Phani/gNB-CU/openair3/MME_APP -I/home/tcs/Phani/gNB-CU/openair2/UTIL/OSA -I/home/tcs/Phani/gNB-CU/openair2/UTIL/MEM -I/home/tcs/Phani/gNB-CU/openair2/UTIL/LISTS -I/home/tcs/Phani/gNB-CU/openair2/UTIL/FIFO -I/home/tcs/Phani/gNB-CU/openair2/UTIL/MATH -I/home/tcs/Phani/gNB-CU/openair2/UTIL/TIMER -I/home/tcs/Phani/gNB-CU/openair2/UTIL/OTG -I/home/tcs/Phani/gNB-CU/openair2/UTIL/OPT -I/home/tcs/Phani/gNB-CU -I/home/tcs/Phani/gNB-CU/common/utils/T -I/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/common/utils/T -I/home/tcs/Phani/gNB-CU/common/utils/hashtable -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/pnf/inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/vnf/public_inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/vnf/inc -I/home/tcs/Phani/gNB-CU/nfapi/oai_integration -I/home/tcs/Phani/gNB-CU/openair2/NR_UE_PHY_INTERFACE -I/home/tcs/Phani/gNB-CU/openair2/LAYER2 -I/home/tcs/Phani/gNB-CU/openair1/SCHED_NR_UE -I/home/tcs/Phani/gNB-CU/openair3/ocp-gtp -I/home/tcs/Phani/gNB-CU/openair3/NAS/NR_UE -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/API/USIM -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/EMM/MSG -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/EMM/SAP -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/ESM/SAP -I/home/tcs/Phani/gNB-CU/openair2/F1AP/lib -I/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES -I/home/tcs/Phani/gNB-CU/common/utils/ds -DSIMDE_X86_AVX_NATIVE -DSIMDE_X86_AVX_NATIVE -DSIMDE_X86_F16C_NATIVE -DSIMDE_X86_FMA_NATIVE -DSIMDE_X86_GFNI_NATIVE -DSIMDE_X86_MMX_NATIVE -DSIMDE_X86_PCLMUL_NATIVE -DSIMDE_X86_SSE2_NATIVE -DSIMDE_X86_SSE3_NATIVE -DSIMDE_X86_SSE_NATIVE -DSIMDE_X86_XOP_HAVE_COM_ -DSIMDE_X86_XOP_NATIVE -DSIMDE_X86_AVX512BW_NATIVE -DSIMDE_X86_AVX512F_NATIVE -DSIMDE_X86_AVX512VL_NATIVE -mavx512bw -march=skylake-avx512 -mtune=skylake-avx512 -DSIMDE_X86_AVX2_NATIVE -DSIMDE_X86_VPCLMULQDQ_NATIVE -march=native -pipe -fPIC -Wall -fno-strict-aliasing -rdynamic -Wno-packed-bitfield-compat -std=gnu11 -funroll-loops  -ggdb2 -DMALLOC_CHECK_=3 -fno-delete-null-pointer-checks -O2   -DASN_DISABLE_OER_SUPPORT -DHAVE_CONFIG_H -DHAVE_CONFIG_H_ -MD -MT openair2/F1AP/lib/CMakeFiles/f1ap_lib.dir/f1ap_ue_context.c.o -MF openair2/F1AP/lib/CMakeFiles/f1ap_lib.dir/f1ap_ue_context.c.o.d -o openair2/F1AP/lib/CMakeFiles/f1ap_lib.dir/f1ap_ue_context.c.o -c /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘decode_cu_to_du_rrc_info’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:94:67: warning: initialization of ‘const F1AP_CUtoDURRCInformation_ExtIEs_t *’ {aka ‘const struct F1AP_CUtoDURRCInformation_ExtIEs *’} from incompatible pointer type ‘struct F1AP_BroadcastPNI_NPN_ID_List_ItemExtIEs *’ [-Wincompatible-pointer-types]
+   94 |        const F1AP_CUtoDURRCInformation_ExtIEs_t *cu2du_info_ext = ext->list.array[i];
+      |                                                                   ^~~
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘decode_drbs_to_setup’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:74:26: warning: initialization of ‘F1AP_DRBs_ToBeSetup_ItemExtIEs_t **’ {aka ‘struct F1AP_DRBs_ToBeSetup_ItemExtIEs **’} from incompatible pointer type ‘struct F1AP_CellToReportItem_ExtIEs **’ [-Wincompatible-pointer-types]
+   74 |     for (IE_TYPE **ptr = (IE_LIST)->array; ptr < &(IE_LIST)->array[(IE_LIST)->count]; ptr++) {       \
+      |                          ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:786:6: note: in expansion of macro ‘F1AP_LIB_FIND_IE’
+  786 |      F1AP_LIB_FIND_IE(F1AP_DRBs_ToBeSetup_ItemExtIEs_t, ie, &ext->list, F1AP_ProtocolIE_ID_id_DLPDCPSNLength, true);
+      |      ^~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:74:48: warning: comparison of distinct pointer types lacks a cast
+   74 |     for (IE_TYPE **ptr = (IE_LIST)->array; ptr < &(IE_LIST)->array[(IE_LIST)->count]; ptr++) {       \
+      |                                                ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:786:6: note: in expansion of macro ‘F1AP_LIB_FIND_IE’
+  786 |      F1AP_LIB_FIND_IE(F1AP_DRBs_ToBeSetup_ItemExtIEs_t, ie, &ext->list, F1AP_ProtocolIE_ID_id_DLPDCPSNLength, true);
+      |      ^~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:789:11: warning: assignment to ‘const F1AP_DRBs_ToBeSetup_ItemExtIEs_t *’ {aka ‘const struct F1AP_DRBs_ToBeSetup_ItemExtIEs *’} from incompatible pointer type ‘struct F1AP_CellToReportItem_ExtIEs *’ [-Wincompatible-pointer-types]
+  789 |        ie = ext->list.array[j];
+      |           ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘decode_drbs_to_setupmod’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:854:11: warning: assignment to ‘const F1AP_DRBs_ToBeSetupMod_ItemExtIEs_t *’ {aka ‘const struct F1AP_DRBs_ToBeSetupMod_ItemExtIEs *’} from incompatible pointer type ‘struct F1AP_CellType_ExtIEs *’ [-Wincompatible-pointer-types]
+  854 |        ie = ext->list.array[j];
+      |           ^
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:30:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘encode_ue_context_setup_req’:
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:221:45: error: invalid application of ‘sizeof’ to incomplete type ‘struct F1AP_ReferenceConfiguration’
+  221 |   typeof(VaR) lOcPtr = VaR = calloc(1,sizeof(*VaR))
+      |                                             ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1280:7: note: in expansion of macro ‘asn1cCalloc’
+ 1280 |       asn1cCalloc(ltm_info->referenceConfiguration, referenceConfiguration);
+      |       ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1282:28: warning: passing argument 1 of ‘OCTET_STRING_fromBuf’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1282 |       OCTET_STRING_fromBuf(referenceConfiguration, (const char *)ba->buf, ba->len);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            struct F1AP_ReferenceConfiguration *
+In file included from /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/F1AP_SNSSAI.h:15,
+--
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/OCTET_STRING.h:108:42: note: expected ‘OCTET_STRING_t *’ {aka ‘struct OCTET_STRING *’} but argument is of type ‘struct F1AP_ReferenceConfiguration *’
+  108 | int OCTET_STRING_fromBuf(OCTET_STRING_t *s, const char *str, int size);
+      |                          ~~~~~~~~~~~~~~~~^
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:30:
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:221:45: error: invalid application of ‘sizeof’ to incomplete type ‘struct F1AP_CSIResourceConfiguration’
+  221 |   typeof(VaR) lOcPtr = VaR = calloc(1,sizeof(*VaR))
+      |                                             ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1287:7: note: in expansion of macro ‘asn1cCalloc’
+ 1287 |       asn1cCalloc(ltm_info->cSIResourceConfiguration, cSIResourceConfiguration);
+      |       ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1292:55: error: invalid use of undefined type ‘struct F1AP_CSIResourceConfiguration’
+ 1292 |         asn1cCalloc(ltm_info->cSIResourceConfiguration->cSIResourceConfigToAddModList, cSIResourceConfigToAddModList);
+      |                                                       ^~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:221:10: note: in definition of macro ‘asn1cCalloc’
+  221 |   typeof(VaR) lOcPtr = VaR = calloc(1,sizeof(*VaR))
+      |          ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1292:55: error: invalid use of undefined type ‘struct F1AP_CSIResourceConfiguration’
+ 1292 |         asn1cCalloc(ltm_info->cSIResourceConfiguration->cSIResourceConfigToAddModList, cSIResourceConfigToAddModList);
+      |                                                       ^~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:221:24: note: in definition of macro ‘asn1cCalloc’
+  221 |   typeof(VaR) lOcPtr = VaR = calloc(1,sizeof(*VaR))
+      |                        ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1292:55: error: invalid use of undefined type ‘struct F1AP_CSIResourceConfiguration’
+ 1292 |         asn1cCalloc(ltm_info->cSIResourceConfiguration->cSIResourceConfigToAddModList, cSIResourceConfigToAddModList);
+      |                                                       ^~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:221:47: note: in definition of macro ‘asn1cCalloc’
+  221 |   typeof(VaR) lOcPtr = VaR = calloc(1,sizeof(*VaR))
+      |                                               ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1294:30: warning: passing argument 1 of ‘OCTET_STRING_fromBuf’ makes pointer from integer without a cast [-Wint-conversion]
+ 1294 |         OCTET_STRING_fromBuf(cSIResourceConfigToAddModList, (const char *)ba->buf, ba->len);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                              |
+      |                              int
+In file included from /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/F1AP_SNSSAI.h:15,
+--
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/OCTET_STRING.h:108:42: note: expected ‘OCTET_STRING_t *’ {aka ‘struct OCTET_STRING *’} but argument is of type ‘int’
+  108 | int OCTET_STRING_fromBuf(OCTET_STRING_t *s, const char *str, int size);
+      |                          ~~~~~~~~~~~~~~~~^
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:30:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1299:55: error: invalid use of undefined type ‘struct F1AP_CSIResourceConfiguration’
+ 1299 |         asn1cCalloc(ltm_info->cSIResourceConfiguration->cSIResourceConfigToReleaseList, cSIResourceConfigToReleaseList);
+      |                                                       ^~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:221:10: note: in definition of macro ‘asn1cCalloc’
+  221 |   typeof(VaR) lOcPtr = VaR = calloc(1,sizeof(*VaR))
+      |          ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1299:55: error: invalid use of undefined type ‘struct F1AP_CSIResourceConfiguration’
+ 1299 |         asn1cCalloc(ltm_info->cSIResourceConfiguration->cSIResourceConfigToReleaseList, cSIResourceConfigToReleaseList);
+      |                                                       ^~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:221:24: note: in definition of macro ‘asn1cCalloc’
+  221 |   typeof(VaR) lOcPtr = VaR = calloc(1,sizeof(*VaR))
+      |                        ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1299:55: error: invalid use of undefined type ‘struct F1AP_CSIResourceConfiguration’
+ 1299 |         asn1cCalloc(ltm_info->cSIResourceConfiguration->cSIResourceConfigToReleaseList, cSIResourceConfigToReleaseList);
+      |                                                       ^~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:221:47: note: in definition of macro ‘asn1cCalloc’
+  221 |   typeof(VaR) lOcPtr = VaR = calloc(1,sizeof(*VaR))
+      |                                               ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1301:30: warning: passing argument 1 of ‘OCTET_STRING_fromBuf’ makes pointer from integer without a cast [-Wint-conversion]
+ 1301 |         OCTET_STRING_fromBuf(cSIResourceConfigToReleaseList, (const char *)ba->buf, ba->len);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                              |
+      |                              int
+In file included from /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/F1AP_SNSSAI.h:15,
+--
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/OCTET_STRING.h:108:42: note: expected ‘OCTET_STRING_t *’ {aka ‘struct OCTET_STRING *’} but argument is of type ‘int’
+  108 | int OCTET_STRING_fromBuf(OCTET_STRING_t *s, const char *str, int size);
+      |                          ~~~~~~~~~~~~~~~~^
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:30:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1287:55: warning: unused variable ‘cSIResourceConfiguration’ [-Wunused-variable]
+ 1287 |       asn1cCalloc(ltm_info->cSIResourceConfiguration, cSIResourceConfiguration);
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:221:15: note: in definition of macro ‘asn1cCalloc’
+  221 |   typeof(VaR) lOcPtr = VaR = calloc(1,sizeof(*VaR))
+      |               ^~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1317:44: error: unknown type name ‘F1AP_LTMConfigurationIDMapping_Item_t’; did you mean ‘F1AP_LTMConfigurationIDMappingList_t’?
+ 1317 |       asn1cSequenceAdd(ltm_map_list->list, F1AP_LTMConfigurationIDMapping_Item_t, ltm_item);
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:223:3: note: in definition of macro ‘asn1cSequenceAdd’
+  223 |   TyPe *lOcPtr= calloc(1,sizeof(TyPe)); \
+      |   ^~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1317:44: error: ‘F1AP_LTMConfigurationIDMapping_Item_t’ undeclared (first use in this function); did you mean ‘F1AP_LTMConfigurationIDMapping_Item’?
+ 1317 |       asn1cSequenceAdd(ltm_map_list->list, F1AP_LTMConfigurationIDMapping_Item_t, ltm_item);
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:223:33: note: in definition of macro ‘asn1cSequenceAdd’
+  223 |   TyPe *lOcPtr= calloc(1,sizeof(TyPe)); \
+      |                                 ^~~~
+--
+ 1317 |       asn1cSequenceAdd(ltm_map_list->list, F1AP_LTMConfigurationIDMapping_Item_t, ltm_item);
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:223:33: note: in definition of macro ‘asn1cSequenceAdd’
+  223 |   TyPe *lOcPtr= calloc(1,sizeof(TyPe)); \
+      |                                 ^~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1320:29: error: expected expression before ‘<’ token
+ 1320 |       F1AP_NRCGI_t *nrcgi = <m_item->lTMCellID;
+      |                             ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1326:15: error: request for member ‘lTMConfigurationID’ in something not a structure or union
+ 1326 |       ltm_item->lTMConfigurationID = item->lTMConfigurationID;
+      |               ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1341:26: warning: passing argument 1 of ‘OCTET_STRING_fromBuf’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1341 |     OCTET_STRING_fromBuf(&early_sync->requestforRACHConfiguration, (const char *)ba->buf, ba->len);
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          F1AP_RequestforRACHConfiguration_t * {aka long int *}
+In file included from /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/F1AP_SNSSAI.h:15,
+--
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/OCTET_STRING.h:108:42: note: expected ‘OCTET_STRING_t *’ {aka ‘struct OCTET_STRING *’} but argument is of type ‘F1AP_RequestforRACHConfiguration_t *’ {aka ‘long int *’}
+  108 | int OCTET_STRING_fromBuf(OCTET_STRING_t *s, const char *str, int size);
+      |                          ~~~~~~~~~~~~~~~~^
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:30:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1347:43: error: unknown type name ‘F1AP_LTMgNB_DU_IDs_Item_t’; did you mean ‘F1AP_LTMgNB_DU_IDsList_t’?
+ 1347 |       asn1cSequenceAdd(du_ids_list->list, F1AP_LTMgNB_DU_IDs_Item_t, du_item);
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:223:3: note: in definition of macro ‘asn1cSequenceAdd’
+  223 |   TyPe *lOcPtr= calloc(1,sizeof(TyPe)); \
+      |   ^~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1347:43: error: ‘F1AP_LTMgNB_DU_IDs_Item_t’ undeclared (first use in this function); did you mean ‘F1AP_LTMgNB_DU_IDs_Item’?
+ 1347 |       asn1cSequenceAdd(du_ids_list->list, F1AP_LTMgNB_DU_IDs_Item_t, du_item);
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:223:33: note: in definition of macro ‘asn1cSequenceAdd’
+  223 |   TyPe *lOcPtr= calloc(1,sizeof(TyPe)); \
+      |                                 ^~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1350:14: error: request for member ‘lTMgNB_DU_ID’ in something not a structure or union
+ 1350 |       du_item->lTMgNB_DU_ID = item->lTMgNB_DU_ID;
+      |              ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘cp_ue_context_rel_cmd’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2539:11: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘gnb_du_ue_agg_mbr_ul’
+ 2539 |   if (orig->gnb_du_ue_agg_mbr_ul)
+      |           ^~
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2540:18: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘gnb_du_ue_agg_mbr_ul’
+ 2540 |     _F1_MALLOC(cp.gnb_du_ue_agg_mbr_ul, *orig->gnb_du_ue_agg_mbr_ul);
+      |                  ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:105:5: note: in definition of macro ‘_F1_MALLOC’
+  105 |     VaR = malloc_or_fail(sizeof(*VaR)); \
+      |     ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2540:18: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘gnb_du_ue_agg_mbr_ul’
+ 2540 |     _F1_MALLOC(cp.gnb_du_ue_agg_mbr_ul, *orig->gnb_du_ue_agg_mbr_ul);
+      |                  ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:105:34: note: in definition of macro ‘_F1_MALLOC’
+  105 |     VaR = malloc_or_fail(sizeof(*VaR)); \
+      |                                  ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2540:18: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘gnb_du_ue_agg_mbr_ul’
+ 2540 |     _F1_MALLOC(cp.gnb_du_ue_agg_mbr_ul, *orig->gnb_du_ue_agg_mbr_ul);
+      |                  ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:106:6: note: in definition of macro ‘_F1_MALLOC’
+  106 |     *VaR = VaLue;                       \
+      |      ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2540:46: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘gnb_du_ue_agg_mbr_ul’
+ 2540 |     _F1_MALLOC(cp.gnb_du_ue_agg_mbr_ul, *orig->gnb_du_ue_agg_mbr_ul);
+      |                                              ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:106:12: note: in definition of macro ‘_F1_MALLOC’
+  106 |     *VaR = VaLue;                       \
+      |            ^~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2543:11: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘LTMInformation_Setup’
+ 2543 |   if (orig->LTMInformation_Setup) {
+      |           ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2544:7: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘LTMInformation_Setup’
+ 2544 |     cp.LTMInformation_Setup = calloc_or_fail(1, sizeof(*cp.LTMInformation_Setup));
+      |       ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2544:59: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘LTMInformation_Setup’
+ 2544 |     cp.LTMInformation_Setup = calloc_or_fail(1, sizeof(*cp.LTMInformation_Setup));
+      |                                                           ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2545:8: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘LTMInformation_Setup’
+ 2545 |     *cp.LTMInformation_Setup = cp_ltm_information_setup(orig->LTMInformation_Setup);
+      |        ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2545:61: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘LTMInformation_Setup’
+ 2545 |     *cp.LTMInformation_Setup = cp_ltm_information_setup(orig->LTMInformation_Setup);
+      |                                                             ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2547:11: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘LTMConfigurationIDMappingList’
+ 2547 |   if (orig->LTMConfigurationIDMappingList) {
+      |           ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2548:7: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘LTMConfigurationIDMappingList’
+ 2548 |     cp.LTMConfigurationIDMappingList = calloc_or_fail(1, sizeof(*cp.LTMConfigurationIDMappingList));
+      |       ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2548:68: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘LTMConfigurationIDMappingList’
+ 2548 |     cp.LTMConfigurationIDMappingList = calloc_or_fail(1, sizeof(*cp.LTMConfigurationIDMappingList));
+      |                                                                    ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2549:8: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘LTMConfigurationIDMappingList’
+ 2549 |     *cp.LTMConfigurationIDMappingList = cp_ltm_configuration_id_mapping_list(orig->LTMConfigurationIDMappingList);
+      |        ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2549:82: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘LTMConfigurationIDMappingList’
+ 2549 |     *cp.LTMConfigurationIDMappingList = cp_ltm_configuration_id_mapping_list(orig->LTMConfigurationIDMappingList);
+      |                                                                                  ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2551:11: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘EarlySyncInformation_Request’
+ 2551 |   if (orig->EarlySyncInformation_Request) {
+      |           ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2552:7: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘EarlySyncInformation_Request’
+ 2552 |     cp.EarlySyncInformation_Request = calloc_or_fail(1, sizeof(*cp.EarlySyncInformation_Request));
+      |       ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2552:67: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘EarlySyncInformation_Request’
+ 2552 |     cp.EarlySyncInformation_Request = calloc_or_fail(1, sizeof(*cp.EarlySyncInformation_Request));
+      |                                                                   ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2553:8: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘EarlySyncInformation_Request’
+ 2553 |     *cp.EarlySyncInformation_Request = cp_early_sync_information_request(orig->EarlySyncInformation_Request);
+      |        ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:2553:78: error: ‘f1ap_ue_context_rel_cmd_t’ has no member named ‘EarlySyncInformation_Request’
+ 2553 |     *cp.EarlySyncInformation_Request = cp_early_sync_information_request(orig->EarlySyncInformation_Request);
+      |                                                                              ^~
+[59/1581] Building C object openair2/F1AP/MESSAGES/CMakeFiles/asn1_f1ap.dir/F1AP_DRBs-ToBeSetup-List.c.o
+[60/1581] Building C object openair2/F1AP/MESSAGES/CMakeFiles/asn1_f1ap.dir/F1AP_DRBs-Modified-Item.c.o
+[61/1581] Building C object openair2/F1AP/MESSAGES/CMakeFiles/asn1_f1ap.dir/F1AP_DRBs-ModifiedConf-Item.c.o
+WARNING: 10 warnings. See /home/tcs/Phani/gNB-CU/cmake_targets/log/all.txt
+ERROR: 35 error. See /home/tcs/Phani/gNB-CU/cmake_targets/log/all.txt
+compilation of  rfsimulator nr-softmodem nr-cuup nrscope params_libconfig coding rfsimulator dfts params_yaml vrtsim failed
+build have failed

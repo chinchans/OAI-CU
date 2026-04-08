@@ -1,0 +1,418 @@
+Will compile gNB
+Enabling build of optional shared library nrscope
+OPENAIR_DIR    = /home/tcs/Phani/gNB-CU
+Running "cmake -DOAI_SIMU=ON -GNinja -DENABLE_NRSCOPE=ON ../../.."
+-- Ccache not found. Consider installing it for faster compilation. Command: sudo apt/dnf install ccache
+-- Check if /opt/asn1c/bin/asn1c supports -gen-APER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-UPER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-JER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-BER
+-- Check if /opt/asn1c/bin/asn1c supports -no-gen-OER
+-- CMAKE_BUILD_TYPE is RelWithDebInfo
+-- CPU architecture is x86_64
+-- AVX512 intrinsics are ON
+-- AVX2 intrinsics are ON
+-- LTTNG support disabled
+-- Checking for module 'cblas'
+--   No package 'cblas' found
+-- No Doxygen documentation requested
+-- No Support for Aerial
+-- libforms library, required for scopes, found at /usr/lib/libforms.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build
+cd /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build
+Running "cmake --build .  --target  rfsimulator nr-softmodem nr-cuup nrscope params_libconfig coding rfsimulator dfts params_yaml vrtsim -- -j8"
+Log file for compilation is being written to: /home/tcs/Phani/gNB-CU/cmake_targets/log/all.txt
+[3/8] Checking validity of VCD files
+[4/8] Building C object openair2/F1AP/lib/CMakeFiles/f1ap_lib.dir/f1ap_ue_context.c.o
+FAILED: openair2/F1AP/lib/CMakeFiles/f1ap_lib.dir/f1ap_ue_context.c.o 
+/usr/bin/cc -DAVX2 -DAVX512 -DCMAKE_BUILD_TYPE=\"RelWithDebInfo\" -DHAVE_NETINET_IN_H -DMAX_NUM_CCs=1 -DNAS_BUILT_IN_UE -DNB_ANTENNAS_RX=4 -DNB_ANTENNAS_TX=4 -DNUMBER_OF_UE_MAX_NB_IoT=16 -DRRC_DEFAULT_RAB_IS_AM -DSTDC_HEADERS="1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_FCNTL_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_SYS_SOCKET_H=1 -DHAVE_STRERROR=1 -DHAVE_SOCKET=1 -DHAVE_MEMSET=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_LIBSCTP" -DT_TRACER -I/home/tcs/Phani/gNB-CU/openair3/S1AP -I/home/tcs/Phani/gNB-CU/openair3/NGAP -I/home/tcs/Phani/gNB-CU/openair2/X2AP -I/home/tcs/Phani/gNB-CU/radio/COMMON -I/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build -I/home/tcs/Phani/gNB-CU/executables -I/home/tcs/Phani/gNB-CU/openair2/COMMON -I/home/tcs/Phani/gNB-CU/openair2/UTIL -I/home/tcs/Phani/gNB-CU/openair2/UTIL/LOG -I/home/tcs/Phani/gNB-CU/openair3/COMMON -I/home/tcs/Phani/gNB-CU/openair3/UTILS -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/nfapi/public_inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/common/public_inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/pnf/public_inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/nfapi/inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/sim_common/inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/pnf_sim/inc -I/home/tcs/Phani/gNB-CU/openair1 -I/home/tcs/Phani/gNB-CU/openair2 -I/home/tcs/Phani/gNB-CU/openair3/NAS/TOOLS -I/home/tcs/Phani/gNB-CU/openair2/ENB_APP -I/home/tcs/Phani/gNB-CU/openair2/GNB_APP -I/home/tcs/Phani/gNB-CU/openair2/MCE_APP -I/home/tcs/Phani/gNB-CU/openair2/LAYER2/RLC -I/home/tcs/Phani/gNB-CU/openair2/LAYER2/PDCP_v10.1.0 -I/home/tcs/Phani/gNB-CU/openair2/RRC/LTE/MESSAGES -I/home/tcs/Phani/gNB-CU/openair2/RRC/LTE -I/home/tcs/Phani/gNB-CU/common/utils -I/home/tcs/Phani/gNB-CU/common/utils/collection -I/home/tcs/Phani/gNB-CU/common/utils/ocp_itti -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON/API/NETWORK -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON/EMM/MSG -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON/ESM/MSG -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/ESM -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/EMM -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/API/USER -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON/IES -I/home/tcs/Phani/gNB-CU/openair3/NAS/COMMON/UTIL -I/home/tcs/Phani/gNB-CU/openair3/SECU -I/home/tcs/Phani/gNB-CU/openair3/SCTP -I/home/tcs/Phani/gNB-CU/openair2/M2AP -I/home/tcs/Phani/gNB-CU/openair2/F1AP -I/home/tcs/Phani/gNB-CU/openair3/ocp-gtpu -I/home/tcs/Phani/gNB-CU/openair3/M3AP -I/home/tcs/Phani/gNB-CU/openair3/MME_APP -I/home/tcs/Phani/gNB-CU/openair2/UTIL/OSA -I/home/tcs/Phani/gNB-CU/openair2/UTIL/MEM -I/home/tcs/Phani/gNB-CU/openair2/UTIL/LISTS -I/home/tcs/Phani/gNB-CU/openair2/UTIL/FIFO -I/home/tcs/Phani/gNB-CU/openair2/UTIL/MATH -I/home/tcs/Phani/gNB-CU/openair2/UTIL/TIMER -I/home/tcs/Phani/gNB-CU/openair2/UTIL/OTG -I/home/tcs/Phani/gNB-CU/openair2/UTIL/OPT -I/home/tcs/Phani/gNB-CU -I/home/tcs/Phani/gNB-CU/common/utils/T -I/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/common/utils/T -I/home/tcs/Phani/gNB-CU/common/utils/hashtable -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/pnf/inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/vnf/public_inc -I/home/tcs/Phani/gNB-CU/nfapi/open-nFAPI/vnf/inc -I/home/tcs/Phani/gNB-CU/nfapi/oai_integration -I/home/tcs/Phani/gNB-CU/openair2/NR_UE_PHY_INTERFACE -I/home/tcs/Phani/gNB-CU/openair2/LAYER2 -I/home/tcs/Phani/gNB-CU/openair1/SCHED_NR_UE -I/home/tcs/Phani/gNB-CU/openair3/ocp-gtp -I/home/tcs/Phani/gNB-CU/openair3/NAS/NR_UE -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/API/USIM -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/EMM/MSG -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/EMM/SAP -I/home/tcs/Phani/gNB-CU/openair3/NAS/UE/ESM/SAP -I/home/tcs/Phani/gNB-CU/openair2/F1AP/lib -I/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES -I/home/tcs/Phani/gNB-CU/common/utils/ds -DSIMDE_X86_AVX_NATIVE -DSIMDE_X86_AVX_NATIVE -DSIMDE_X86_F16C_NATIVE -DSIMDE_X86_FMA_NATIVE -DSIMDE_X86_GFNI_NATIVE -DSIMDE_X86_MMX_NATIVE -DSIMDE_X86_PCLMUL_NATIVE -DSIMDE_X86_SSE2_NATIVE -DSIMDE_X86_SSE3_NATIVE -DSIMDE_X86_SSE_NATIVE -DSIMDE_X86_XOP_HAVE_COM_ -DSIMDE_X86_XOP_NATIVE -DSIMDE_X86_AVX512BW_NATIVE -DSIMDE_X86_AVX512F_NATIVE -DSIMDE_X86_AVX512VL_NATIVE -mavx512bw -march=skylake-avx512 -mtune=skylake-avx512 -DSIMDE_X86_AVX2_NATIVE -DSIMDE_X86_VPCLMULQDQ_NATIVE -march=native -pipe -fPIC -Wall -fno-strict-aliasing -rdynamic -Wno-packed-bitfield-compat -std=gnu11 -funroll-loops  -ggdb2 -DMALLOC_CHECK_=3 -fno-delete-null-pointer-checks -O2   -DASN_DISABLE_OER_SUPPORT -DHAVE_CONFIG_H -DHAVE_CONFIG_H_ -MD -MT openair2/F1AP/lib/CMakeFiles/f1ap_lib.dir/f1ap_ue_context.c.o -MF openair2/F1AP/lib/CMakeFiles/f1ap_lib.dir/f1ap_ue_context.c.o.d -o openair2/F1AP/lib/CMakeFiles/f1ap_lib.dir/f1ap_ue_context.c.o -c /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘encode_ltm_information_setup’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:85:26: warning: passing argument 1 of ‘OCTET_STRING_fromBuf’ from incompatible pointer type [-Wincompatible-pointer-types]
+   85 |     OCTET_STRING_fromBuf(refConfig, (const char *)ba->buf, ba->len);
+      |                          ^~~~~~~~~
+      |                          |
+      |                          byte_array_t *
+In file included from /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/F1AP_SNSSAI.h:15,
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:33,
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/OCTET_STRING.h:108:42: note: expected ‘OCTET_STRING_t *’ {aka ‘struct OCTET_STRING *’} but argument is of type ‘byte_array_t *’
+  108 | int OCTET_STRING_fromBuf(OCTET_STRING_t *s, const char *str, int size);
+      |                          ~~~~~~~~~~~~~~~~^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:97:28: warning: passing argument 1 of ‘OCTET_STRING_fromBuf’ from incompatible pointer type [-Wincompatible-pointer-types]
+   97 |       OCTET_STRING_fromBuf(csiAddMod, (const char *)ba->buf, ba->len);
+      |                            ^~~~~~~~~
+      |                            |
+      |                            byte_array_t *
+In file included from /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/F1AP_SNSSAI.h:15,
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:33,
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/OCTET_STRING.h:108:42: note: expected ‘OCTET_STRING_t *’ {aka ‘struct OCTET_STRING *’} but argument is of type ‘byte_array_t *’
+  108 | int OCTET_STRING_fromBuf(OCTET_STRING_t *s, const char *str, int size);
+      |                          ~~~~~~~~~~~~~~~~^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:104:28: warning: passing argument 1 of ‘OCTET_STRING_fromBuf’ from incompatible pointer type [-Wincompatible-pointer-types]
+  104 |       OCTET_STRING_fromBuf(csiRelease, (const char *)ba->buf, ba->len);
+      |                            ^~~~~~~~~~
+      |                            |
+      |                            byte_array_t *
+In file included from /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/F1AP_SNSSAI.h:15,
+--
+/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/OCTET_STRING.h:108:42: note: expected ‘OCTET_STRING_t *’ {aka ‘struct OCTET_STRING *’} but argument is of type ‘byte_array_t *’
+  108 | int OCTET_STRING_fromBuf(OCTET_STRING_t *s, const char *str, int size);
+      |                          ~~~~~~~~~~~~~~~~^
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:30:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘encode_ltm_configuration_id_mapping_list’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:116:32: error: unknown type name ‘F1AP_LTMConfigurationIDMapping_Item_t’; did you mean ‘F1AP_LTMConfigurationIDMappingList_t’?
+  116 |     asn1cSequenceAdd(enc.list, F1AP_LTMConfigurationIDMapping_Item_t, item);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:223:3: note: in definition of macro ‘asn1cSequenceAdd’
+  223 |   TyPe *lOcPtr= calloc(1,sizeof(TyPe)); \
+      |   ^~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:116:32: error: ‘F1AP_LTMConfigurationIDMapping_Item_t’ undeclared (first use in this function); did you mean ‘F1AP_LTMConfigurationIDMapping_Item’?
+  116 |     asn1cSequenceAdd(enc.list, F1AP_LTMConfigurationIDMapping_Item_t, item);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:223:33: note: in definition of macro ‘asn1cSequenceAdd’
+  223 |   TyPe *lOcPtr= calloc(1,sizeof(TyPe)); \
+      |                                 ^~~~
+--
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:223:33: note: in definition of macro ‘asn1cSequenceAdd’
+  223 |   TyPe *lOcPtr= calloc(1,sizeof(TyPe)); \
+      |                                 ^~~~
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:28,
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:120:116: error: request for member ‘lTMCellID’ in something not a structure or union
+  120 |     MCC_MNC_TO_PLMNID(src->lTMCellID_plmn.mcc, src->lTMCellID_plmn.mnc, src->lTMCellID_plmn.mnc_digit_length, &item->lTMCellID.pLMN_Identity);
+      |                                                                                                                    ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:307:6: note: in definition of macro ‘MCC_MNC_TO_PLMNID’
+  307 |     (oCTETsTRING)->buf = calloc(3, sizeof(uint8_t));                           \
+      |      ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:120:116: error: request for member ‘lTMCellID’ in something not a structure or union
+  120 |     MCC_MNC_TO_PLMNID(src->lTMCellID_plmn.mcc, src->lTMCellID_plmn.mnc, src->lTMCellID_plmn.mnc_digit_length, &item->lTMCellID.pLMN_Identity);
+      |                                                                                                                    ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:308:6: note: in definition of macro ‘MCC_MNC_TO_PLMNID’
+  308 |     (oCTETsTRING)->buf[0] = (MCC_MNC_DECIMAL(mCC) << 4) | MCC_HUNDREDS(mCC);   \
+      |      ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:120:116: error: request for member ‘lTMCellID’ in something not a structure or union
+  120 |     MCC_MNC_TO_PLMNID(src->lTMCellID_plmn.mcc, src->lTMCellID_plmn.mnc, src->lTMCellID_plmn.mnc_digit_length, &item->lTMCellID.pLMN_Identity);
+      |                                                                                                                    ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:309:6: note: in definition of macro ‘MCC_MNC_TO_PLMNID’
+  309 |     (oCTETsTRING)->buf[1] = (MNC_HUNDREDS(mNC,mNCdIGITlENGTH) << 4) | MCC_MNC_DIGIT(mCC);     \
+      |      ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:120:116: error: request for member ‘lTMCellID’ in something not a structure or union
+  120 |     MCC_MNC_TO_PLMNID(src->lTMCellID_plmn.mcc, src->lTMCellID_plmn.mnc, src->lTMCellID_plmn.mnc_digit_length, &item->lTMCellID.pLMN_Identity);
+      |                                                                                                                    ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:310:6: note: in definition of macro ‘MCC_MNC_TO_PLMNID’
+  310 |     (oCTETsTRING)->buf[2] = (MCC_MNC_DIGIT(mNC) << 4) | MCC_MNC_DECIMAL(mNC);  \
+      |      ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:120:116: error: request for member ‘lTMCellID’ in something not a structure or union
+  120 |     MCC_MNC_TO_PLMNID(src->lTMCellID_plmn.mcc, src->lTMCellID_plmn.mnc, src->lTMCellID_plmn.mnc_digit_length, &item->lTMCellID.pLMN_Identity);
+      |                                                                                                                    ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:311:6: note: in definition of macro ‘MCC_MNC_TO_PLMNID’
+  311 |     (oCTETsTRING)->size = 3;                                                   \
+      |      ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:121:61: error: request for member ‘lTMCellID’ in something not a structure or union
+  121 |     NR_CELL_ID_TO_BIT_STRING(src->lTMCellID_nr_cellid, &item->lTMCellID.nRCellIdentity);
+      |                                                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:431:6: note: in definition of macro ‘NR_CELL_ID_TO_BIT_STRING’
+  431 |     (bITsTRING)->buf = calloc(5, sizeof(uint8_t));      \
+      |      ^~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:121:61: error: request for member ‘lTMCellID’ in something not a structure or union
+  121 |     NR_CELL_ID_TO_BIT_STRING(src->lTMCellID_nr_cellid, &item->lTMCellID.nRCellIdentity);
+      |                                                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:432:6: note: in definition of macro ‘NR_CELL_ID_TO_BIT_STRING’
+  432 |     (bITsTRING)->buf[0] = ((mACRO) >> 28) & 0xff;       \
+      |      ^~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:121:61: error: request for member ‘lTMCellID’ in something not a structure or union
+  121 |     NR_CELL_ID_TO_BIT_STRING(src->lTMCellID_nr_cellid, &item->lTMCellID.nRCellIdentity);
+      |                                                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:433:6: note: in definition of macro ‘NR_CELL_ID_TO_BIT_STRING’
+  433 |     (bITsTRING)->buf[1] = ((mACRO) >> 20) & 0xff;       \
+      |      ^~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:121:61: error: request for member ‘lTMCellID’ in something not a structure or union
+  121 |     NR_CELL_ID_TO_BIT_STRING(src->lTMCellID_nr_cellid, &item->lTMCellID.nRCellIdentity);
+      |                                                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:434:6: note: in definition of macro ‘NR_CELL_ID_TO_BIT_STRING’
+  434 |     (bITsTRING)->buf[2] = ((mACRO) >> 12) & 0xff;       \
+      |      ^~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:121:61: error: request for member ‘lTMCellID’ in something not a structure or union
+  121 |     NR_CELL_ID_TO_BIT_STRING(src->lTMCellID_nr_cellid, &item->lTMCellID.nRCellIdentity);
+      |                                                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:435:6: note: in definition of macro ‘NR_CELL_ID_TO_BIT_STRING’
+  435 |     (bITsTRING)->buf[3] = ((mACRO) >> 4)  & 0xff;       \
+      |      ^~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:121:61: error: request for member ‘lTMCellID’ in something not a structure or union
+  121 |     NR_CELL_ID_TO_BIT_STRING(src->lTMCellID_nr_cellid, &item->lTMCellID.nRCellIdentity);
+      |                                                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:436:6: note: in definition of macro ‘NR_CELL_ID_TO_BIT_STRING’
+  436 |     (bITsTRING)->buf[4] = ((mACRO) & 0x0f) << 4;        \
+      |      ^~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:121:61: error: request for member ‘lTMCellID’ in something not a structure or union
+  121 |     NR_CELL_ID_TO_BIT_STRING(src->lTMCellID_nr_cellid, &item->lTMCellID.nRCellIdentity);
+      |                                                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:437:6: note: in definition of macro ‘NR_CELL_ID_TO_BIT_STRING’
+  437 |     (bITsTRING)->size = 5;                              \
+      |      ^~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:121:61: error: request for member ‘lTMCellID’ in something not a structure or union
+  121 |     NR_CELL_ID_TO_BIT_STRING(src->lTMCellID_nr_cellid, &item->lTMCellID.nRCellIdentity);
+      |                                                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:438:6: note: in definition of macro ‘NR_CELL_ID_TO_BIT_STRING’
+  438 |     (bITsTRING)->bits_unused = 4;                       \
+      |      ^~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:124:9: error: request for member ‘lTMConfigurationID’ in something not a structure or union
+  124 |     item->lTMConfigurationID = src->lTMConfigurationID;
+      |         ^~
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:30:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘encode_early_sync_information_request’:
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:221:46: error: invalid type argument of unary ‘*’ (have ‘F1AP_RequestforRACHConfiguration_t’ {aka ‘long int’})
+  221 |   typeof(VaR) lOcPtr = VaR = calloc(1,sizeof(*VaR))
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:136:5: note: in expansion of macro ‘asn1cCalloc’
+  136 |     asn1cCalloc(enc.requestforRACHConfiguration, rachConfig);
+      |     ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:138:26: warning: passing argument 1 of ‘OCTET_STRING_fromBuf’ makes pointer from integer without a cast [-Wint-conversion]
+  138 |     OCTET_STRING_fromBuf(rachConfig, (const char *)ba->buf, ba->len);
+      |                          ^~~~~~~~~~
+      |                          |
+      |                          F1AP_RequestforRACHConfiguration_t {aka long int}
+In file included from /home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/F1AP_SNSSAI.h:15,
+--
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/cmake_targets/ran_build/build/openair2/F1AP/MESSAGES/OCTET_STRING.h:108:42: note: expected ‘OCTET_STRING_t *’ {aka ‘struct OCTET_STRING *’} but argument is of type ‘F1AP_RequestforRACHConfiguration_t’ {aka ‘long int’}
+  108 | int OCTET_STRING_fromBuf(OCTET_STRING_t *s, const char *str, int size);
+      |                          ~~~~~~~~~~~~~~~~^
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:30:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:143:50: error: unknown type name ‘F1AP_LTMgNB_DU_IDs_Item_t’; did you mean ‘F1AP_LTMgNB_DU_IDsList_t’?
+  143 |     asn1cSequenceAdd(enc.lTMgNB_DU_IDsList.list, F1AP_LTMgNB_DU_IDs_Item_t, item);
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:223:3: note: in definition of macro ‘asn1cSequenceAdd’
+  223 |   TyPe *lOcPtr= calloc(1,sizeof(TyPe)); \
+      |   ^~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:143:50: error: ‘F1AP_LTMgNB_DU_IDs_Item_t’ undeclared (first use in this function); did you mean ‘F1AP_LTMgNB_DU_IDs_Item’?
+  143 |     asn1cSequenceAdd(enc.lTMgNB_DU_IDsList.list, F1AP_LTMgNB_DU_IDs_Item_t, item);
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/common/utils/oai_asn1.h:223:33: note: in definition of macro ‘asn1cSequenceAdd’
+  223 |   TyPe *lOcPtr= calloc(1,sizeof(TyPe)); \
+      |                                 ^~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:145:9: error: request for member ‘lTMgNB_DU_ID’ in something not a structure or union
+  145 |     item->lTMgNB_DU_ID = src->lTMgNB_DU_ID;
+      |         ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘decode_ltm_information_setup’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:159:11: error: unknown type name ‘F1AP_ReferenceConfiguration_t’
+  159 |     const F1AP_ReferenceConfiguration_t *refConfig = ltm_info->referenceConfiguration;
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:159:54: warning: initialization of ‘const int *’ from incompatible pointer type ‘byte_array_t *’ [-Wincompatible-pointer-types]
+  159 |     const F1AP_ReferenceConfiguration_t *refConfig = ltm_info->referenceConfiguration;
+      |                                                      ^~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:160:63: error: request for member ‘size’ in something not a structure or union
+  160 |     *dec->referenceConfiguration = create_byte_array(refConfig->size, (uint8_t*)refConfig->buf);
+      |                                                               ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:160:90: error: request for member ‘buf’ in something not a structure or union
+  160 |     *dec->referenceConfiguration = create_byte_array(refConfig->size, (uint8_t*)refConfig->buf);
+      |                                                                                          ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:166:11: error: unknown type name ‘F1AP_CSIResourceConfiguration_t’
+  166 |     const F1AP_CSIResourceConfiguration_t *csi = ltm_info->cSIResourceConfiguration;
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:166:50: warning: initialization of ‘const int *’ from incompatible pointer type ‘f1ap_csi_resource_configuration_t *’ {aka ‘struct f1ap_csi_resource_configuration_s *’} [-Wincompatible-pointer-types]
+  166 |     const F1AP_CSIResourceConfiguration_t *csi = ltm_info->cSIResourceConfiguration;
+      |                                                  ^~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:169:12: error: request for member ‘cSIResourceConfigToAddModList’ in something not a structure or union
+  169 |     if (csi->cSIResourceConfigToAddModList) {
+      |            ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:171:13: error: unknown type name ‘F1AP_CSIResourceConfigToAddModList_t’
+  171 |       const F1AP_CSIResourceConfigToAddModList_t *csiAddMod = csi->cSIResourceConfigToAddModList;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:171:66: error: request for member ‘cSIResourceConfigToAddModList’ in something not a structure or union
+  171 |       const F1AP_CSIResourceConfigToAddModList_t *csiAddMod = csi->cSIResourceConfigToAddModList;
+      |                                                                  ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:172:98: error: request for member ‘size’ in something not a structure or union
+  172 |       *dec->cSIResourceConfiguration->cSIResourceConfigToAddModList = create_byte_array(csiAddMod->size, (uint8_t*)csiAddMod->buf);
+      |                                                                                                  ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:172:125: error: request for member ‘buf’ in something not a structure or union
+  172 |       *dec->cSIResourceConfiguration->cSIResourceConfigToAddModList = create_byte_array(csiAddMod->size, (uint8_t*)csiAddMod->buf);
+      |                                                                                                                             ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:176:12: error: request for member ‘cSIResourceConfigToReleaseList’ in something not a structure or union
+  176 |     if (csi->cSIResourceConfigToReleaseList) {
+      |            ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:178:13: error: unknown type name ‘F1AP_CSIResourceConfigToReleaseList_t’
+  178 |       const F1AP_CSIResourceConfigToReleaseList_t *csiRelease = csi->cSIResourceConfigToReleaseList;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:178:68: error: request for member ‘cSIResourceConfigToReleaseList’ in something not a structure or union
+  178 |       const F1AP_CSIResourceConfigToReleaseList_t *csiRelease = csi->cSIResourceConfigToReleaseList;
+      |                                                                    ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:179:100: error: request for member ‘size’ in something not a structure or union
+  179 |       *dec->cSIResourceConfiguration->cSIResourceConfigToReleaseList = create_byte_array(csiRelease->size, (uint8_t*)csiRelease->buf);
+      |                                                                                                    ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:179:128: error: request for member ‘buf’ in something not a structure or union
+  179 |       *dec->cSIResourceConfiguration->cSIResourceConfigToReleaseList = create_byte_array(csiRelease->size, (uint8_t*)csiRelease->buf);
+      |                                                                                                                                ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘decode_ltm_configuration_id_mapping_list’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:192:13: error: unknown type name ‘F1AP_LTMConfigurationIDMapping_Item_t’
+  192 |       const F1AP_LTMConfigurationIDMapping_Item_t *src = mapping_list->list.array[i];
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:192:58: warning: initialization of ‘const int *’ from incompatible pointer type ‘struct F1AP_LTMConfigurationIDMapping_Item *’ [-Wincompatible-pointer-types]
+  192 |       const F1AP_LTMConfigurationIDMapping_Item_t *src = mapping_list->list.array[i];
+      |                                                          ^~~~~~~~~~~~
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:28,
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:196:29: error: request for member ‘lTMCellID’ in something not a structure or union
+  196 |       PLMNID_TO_MCC_MNC(&src->lTMCellID.pLMN_Identity, dst->lTMCellID_plmn.mcc, dst->lTMCellID_plmn.mnc, dst->lTMCellID_plmn.mnc_digit_length);
+      |                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:316:13: note: in definition of macro ‘PLMNID_TO_MCC_MNC’
+  316 |     mCC = ((oCTETsTRING)->buf[0] & 0x0F) * 100 +                                  \
+      |             ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:196:29: error: request for member ‘lTMCellID’ in something not a structure or union
+  196 |       PLMNID_TO_MCC_MNC(&src->lTMCellID.pLMN_Identity, dst->lTMCellID_plmn.mcc, dst->lTMCellID_plmn.mnc, dst->lTMCellID_plmn.mnc_digit_length);
+      |                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:317:13: note: in definition of macro ‘PLMNID_TO_MCC_MNC’
+  317 |           ((oCTETsTRING)->buf[0] >> 4 & 0x0F) * 10 +                              \
+      |             ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:196:29: error: request for member ‘lTMCellID’ in something not a structure or union
+  196 |       PLMNID_TO_MCC_MNC(&src->lTMCellID.pLMN_Identity, dst->lTMCellID_plmn.mcc, dst->lTMCellID_plmn.mnc, dst->lTMCellID_plmn.mnc_digit_length);
+      |                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:318:13: note: in definition of macro ‘PLMNID_TO_MCC_MNC’
+  318 |           ((oCTETsTRING)->buf[1] & 0x0F);                                         \
+      |             ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:196:29: error: request for member ‘lTMCellID’ in something not a structure or union
+  196 |       PLMNID_TO_MCC_MNC(&src->lTMCellID.pLMN_Identity, dst->lTMCellID_plmn.mcc, dst->lTMCellID_plmn.mnc, dst->lTMCellID_plmn.mnc_digit_length);
+      |                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:319:24: note: in definition of macro ‘PLMNID_TO_MCC_MNC’
+  319 |     mNCdIGITlENGTH = ((oCTETsTRING)->buf[1] >> 4 & 0x0F) == 0xF ? 2 : 3;          \
+      |                        ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:196:29: error: request for member ‘lTMCellID’ in something not a structure or union
+  196 |       PLMNID_TO_MCC_MNC(&src->lTMCellID.pLMN_Identity, dst->lTMCellID_plmn.mcc, dst->lTMCellID_plmn.mnc, dst->lTMCellID_plmn.mnc_digit_length);
+      |                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:320:40: note: in definition of macro ‘PLMNID_TO_MCC_MNC’
+  320 |     mNC = (mNCdIGITlENGTH == 2 ? 0 : ((oCTETsTRING)->buf[1] >> 4 & 0x0F) * 100) + \
+      |                                        ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:196:29: error: request for member ‘lTMCellID’ in something not a structure or union
+  196 |       PLMNID_TO_MCC_MNC(&src->lTMCellID.pLMN_Identity, dst->lTMCellID_plmn.mcc, dst->lTMCellID_plmn.mnc, dst->lTMCellID_plmn.mnc_digit_length);
+      |                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:321:13: note: in definition of macro ‘PLMNID_TO_MCC_MNC’
+  321 |           ((oCTETsTRING)->buf[2] & 0x0F) * 10 +                                   \
+      |             ^~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:196:29: error: request for member ‘lTMCellID’ in something not a structure or union
+  196 |       PLMNID_TO_MCC_MNC(&src->lTMCellID.pLMN_Identity, dst->lTMCellID_plmn.mcc, dst->lTMCellID_plmn.mnc, dst->lTMCellID_plmn.mnc_digit_length);
+      |                             ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:322:13: note: in definition of macro ‘PLMNID_TO_MCC_MNC’
+  322 |           ((oCTETsTRING)->buf[2] >> 4 & 0x0F);                                    \
+      |             ^~~~~~~~~~~
+In file included from /home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:22,
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:28,
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:197:42: error: request for member ‘lTMCellID’ in something not a structure or union
+  197 |       BIT_STRING_TO_NR_CELL_IDENTITY(&src->lTMCellID.nRCellIdentity, dst->lTMCellID_nr_cellid);
+      |                                          ^~
+/home/tcs/Phani/gNB-CU/common/utils/assertions.h:49:11: note: in definition of macro ‘_Assert_’
+   49 |     if (!(cOND)) {                                          \
+      |           ^~~~
+--
+  290 |     DevCheck((aSN)->bits_unused == 4, (aSN)->bits_unused, 4, 0);       \
+      |     ^~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:197:7: note: in expansion of macro ‘BIT_STRING_TO_NR_CELL_IDENTITY’
+  197 |       BIT_STRING_TO_NR_CELL_IDENTITY(&src->lTMCellID.nRCellIdentity, dst->lTMCellID_nr_cellid);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:197:42: error: request for member ‘lTMCellID’ in something not a structure or union
+  197 |       BIT_STRING_TO_NR_CELL_IDENTITY(&src->lTMCellID.nRCellIdentity, dst->lTMCellID_nr_cellid);
+      |                                          ^~
+/home/tcs/Phani/gNB-CU/common/utils/assertions.h:52:60: note: in definition of macro ‘_Assert_’
+   52 |                 #cOND, __FUNCTION__, __FILE__, __LINE__, ##aRGS);  \
+      |                                                            ^~~~
+--
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:197:7: note: in expansion of macro ‘BIT_STRING_TO_NR_CELL_IDENTITY’
+  197 |       BIT_STRING_TO_NR_CELL_IDENTITY(&src->lTMCellID.nRCellIdentity, dst->lTMCellID_nr_cellid);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:28,
+                 from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:197:42: error: request for member ‘lTMCellID’ in something not a structure or union
+  197 |       BIT_STRING_TO_NR_CELL_IDENTITY(&src->lTMCellID.nRCellIdentity, dst->lTMCellID_nr_cellid);
+      |                                          ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:291:15: note: in definition of macro ‘BIT_STRING_TO_NR_CELL_IDENTITY’
+  291 |     vALUE = ((aSN)->buf[0] << 28) | ((aSN)->buf[1] << 20) |            \
+      |               ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:197:42: error: request for member ‘lTMCellID’ in something not a structure or union
+  197 |       BIT_STRING_TO_NR_CELL_IDENTITY(&src->lTMCellID.nRCellIdentity, dst->lTMCellID_nr_cellid);
+      |                                          ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:291:39: note: in definition of macro ‘BIT_STRING_TO_NR_CELL_IDENTITY’
+  291 |     vALUE = ((aSN)->buf[0] << 28) | ((aSN)->buf[1] << 20) |            \
+      |                                       ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:197:42: error: request for member ‘lTMCellID’ in something not a structure or union
+  197 |       BIT_STRING_TO_NR_CELL_IDENTITY(&src->lTMCellID.nRCellIdentity, dst->lTMCellID_nr_cellid);
+      |                                          ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:292:11: note: in definition of macro ‘BIT_STRING_TO_NR_CELL_IDENTITY’
+  292 |         ((aSN)->buf[2] << 12) | ((aSN)->buf[3]<<4) | ((aSN)->buf[4]>>4);  \
+      |           ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:197:42: error: request for member ‘lTMCellID’ in something not a structure or union
+  197 |       BIT_STRING_TO_NR_CELL_IDENTITY(&src->lTMCellID.nRCellIdentity, dst->lTMCellID_nr_cellid);
+      |                                          ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:292:35: note: in definition of macro ‘BIT_STRING_TO_NR_CELL_IDENTITY’
+  292 |         ((aSN)->buf[2] << 12) | ((aSN)->buf[3]<<4) | ((aSN)->buf[4]>>4);  \
+      |                                   ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:197:42: error: request for member ‘lTMCellID’ in something not a structure or union
+  197 |       BIT_STRING_TO_NR_CELL_IDENTITY(&src->lTMCellID.nRCellIdentity, dst->lTMCellID_nr_cellid);
+      |                                          ^~
+/home/tcs/Phani/gNB-CU/openair3/UTILS/conversions.h:292:56: note: in definition of macro ‘BIT_STRING_TO_NR_CELL_IDENTITY’
+  292 |         ((aSN)->buf[2] << 12) | ((aSN)->buf[3]<<4) | ((aSN)->buf[4]>>4);  \
+      |                                                        ^~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:200:36: error: request for member ‘lTMConfigurationID’ in something not a structure or union
+  200 |       dst->lTMConfigurationID = src->lTMConfigurationID;
+      |                                    ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘decode_early_sync_information_request’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:211:60: warning: initialization of ‘const F1AP_RequestforRACHConfiguration_t *’ {aka ‘const long int *’} from ‘F1AP_RequestforRACHConfiguration_t’ {aka ‘long int’} makes pointer from integer without a cast [-Wint-conversion]
+  211 |     const F1AP_RequestforRACHConfiguration_t *rachConfig = early_sync->requestforRACHConfiguration;
+      |                                                            ^~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:212:69: error: request for member ‘size’ in something not a structure or union
+  212 |     *dec->requestforRACHConfiguration = create_byte_array(rachConfig->size, (uint8_t*)rachConfig->buf);
+      |                                                                     ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:212:97: error: request for member ‘buf’ in something not a structure or union
+  212 |     *dec->requestforRACHConfiguration = create_byte_array(rachConfig->size, (uint8_t*)rachConfig->buf);
+      |                                                                                                 ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:220:13: error: unknown type name ‘F1AP_LTMgNB_DU_IDs_Item_t’
+  220 |       const F1AP_LTMgNB_DU_IDs_Item_t *src = early_sync->lTMgNB_DU_IDsList.list.array[i];
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:220:46: warning: initialization of ‘const int *’ from incompatible pointer type ‘struct F1AP_LTMgNB_DU_IDs_Item *’ [-Wincompatible-pointer-types]
+  220 |       const F1AP_LTMgNB_DU_IDs_Item_t *src = early_sync->lTMgNB_DU_IDsList.list.array[i];
+      |                                              ^~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:221:57: error: request for member ‘lTMgNB_DU_ID’ in something not a structure or union
+  221 |       dec->lTMgNB_DU_IDsList.items[i].lTMgNB_DU_ID = src->lTMgNB_DU_ID;
+      |                                                         ^~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘decode_cu_to_du_rrc_info’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:248:67: warning: initialization of ‘const F1AP_CUtoDURRCInformation_ExtIEs_t *’ {aka ‘const struct F1AP_CUtoDURRCInformation_ExtIEs *’} from incompatible pointer type ‘struct F1AP_BroadcastPNI_NPN_ID_List_ItemExtIEs *’ [-Wincompatible-pointer-types]
+  248 |        const F1AP_CUtoDURRCInformation_ExtIEs_t *cu2du_info_ext = ext->list.array[i];
+      |                                                                   ^~~
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘decode_drbs_to_setup’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:74:26: warning: initialization of ‘F1AP_DRBs_ToBeSetup_ItemExtIEs_t **’ {aka ‘struct F1AP_DRBs_ToBeSetup_ItemExtIEs **’} from incompatible pointer type ‘struct F1AP_CellToReportItem_ExtIEs **’ [-Wincompatible-pointer-types]
+   74 |     for (IE_TYPE **ptr = (IE_LIST)->array; ptr < &(IE_LIST)->array[(IE_LIST)->count]; ptr++) {       \
+      |                          ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:940:6: note: in expansion of macro ‘F1AP_LIB_FIND_IE’
+  940 |      F1AP_LIB_FIND_IE(F1AP_DRBs_ToBeSetup_ItemExtIEs_t, ie, &ext->list, F1AP_ProtocolIE_ID_id_DLPDCPSNLength, true);
+      |      ^~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:74:48: warning: comparison of distinct pointer types lacks a cast
+   74 |     for (IE_TYPE **ptr = (IE_LIST)->array; ptr < &(IE_LIST)->array[(IE_LIST)->count]; ptr++) {       \
+      |                                                ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:940:6: note: in expansion of macro ‘F1AP_LIB_FIND_IE’
+  940 |      F1AP_LIB_FIND_IE(F1AP_DRBs_ToBeSetup_ItemExtIEs_t, ie, &ext->list, F1AP_ProtocolIE_ID_id_DLPDCPSNLength, true);
+      |      ^~~~~~~~~~~~~~~~
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:943:11: warning: assignment to ‘const F1AP_DRBs_ToBeSetup_ItemExtIEs_t *’ {aka ‘const struct F1AP_DRBs_ToBeSetup_ItemExtIEs *’} from incompatible pointer type ‘struct F1AP_CellToReportItem_ExtIEs *’ [-Wincompatible-pointer-types]
+  943 |        ie = ext->list.array[j];
+      |           ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘decode_drbs_to_setupmod’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1008:11: warning: assignment to ‘const F1AP_DRBs_ToBeSetupMod_ItemExtIEs_t *’ {aka ‘const struct F1AP_DRBs_ToBeSetupMod_ItemExtIEs *’} from incompatible pointer type ‘struct F1AP_CellType_ExtIEs *’ [-Wincompatible-pointer-types]
+ 1008 |        ie = ext->list.array[j];
+      |           ^
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘encode_ue_context_setup_req’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1377:45: error: incompatible types when assigning to type ‘F1AP_LTMInformation_Setup_t’ {aka ‘struct F1AP_LTMInformation_Setup’} from type ‘f1ap_ltm_information_setup_t’ {aka ‘struct f1ap_ltm_information_setup_s’}
+ 1377 |     ie->value.choice.LTMInformation_Setup = encode_ltm_information_setup(req->LTMInformation_Setup);
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:24:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c: In function ‘decode_ue_context_setup_req’:
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_ue_context.c:1483:79: warning: passing argument 2 of ‘decode_ltm_information_setup’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1483 |         _F1_CHECK_EXP(decode_ltm_information_setup(out->LTMInformation_Setup, &ie->value.choice.LTMInformation_Setup));
+      |                                                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                               |
+      |                                                                               F1AP_LTMInformation_Setup_t * {aka struct F1AP_LTMInformation_Setup *}
+/home/tcs/Phani/gNB-CU/openair2/F1AP/lib/f1ap_lib_common.h:56:11: note: in definition of macro ‘_F1_CHECK_EXP’
+WARNING: 15 warnings. See /home/tcs/Phani/gNB-CU/cmake_targets/log/all.txt
+ERROR: 55 error. See /home/tcs/Phani/gNB-CU/cmake_targets/log/all.txt
+compilation of  rfsimulator nr-softmodem nr-cuup nrscope params_libconfig coding rfsimulator dfts params_yaml vrtsim failed
+build have failed
