@@ -1112,8 +1112,8 @@ bool decode_f1ap_setup_response(const F1AP_F1AP_PDU_t *pdu, f1ap_setup_resp_t *o
         _F1_EQ_CHECK_INT(ie->value.present, F1AP_F1SetupResponseIEs__value_PR_RRC_Version);
         // RRC Version: "This IE is not used in this release."
         if (ie->value.choice.RRC_Version.iE_Extensions) {
-          F1AP_ProtocolExtensionContainer_19016P228_t *ext =
-              (F1AP_ProtocolExtensionContainer_19016P228_t *)ie->value.choice.RRC_Version.iE_Extensions;
+          F1AP_ProtocolExtensionContainer_10696P228_t *ext =
+              (F1AP_ProtocolExtensionContainer_10696P228_t *)ie->value.choice.RRC_Version.iE_Extensions;
           if (ext->list.count > 0) {
             F1AP_RRC_Version_ExtIEs_t *rrcext = ext->list.array[0];
             OCTET_STRING_t *os = &rrcext->extensionValue.choice.OCTET_STRING_SIZE_3_;
