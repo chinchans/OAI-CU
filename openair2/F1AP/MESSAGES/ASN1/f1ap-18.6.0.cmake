@@ -639,7 +639,6 @@ F1AP_LTMCFRAResourceConfig.c
 F1AP_LTMCellSwitchInformation.c
 F1AP_LTMCells-ToBeReleased-Item.c
 F1AP_LTMCells-ToBeReleased-List.c
-F1AP_LTMConfiguration.c
 F1AP_LTMConfigurationID.c
 F1AP_LTMConfigurationIDMapping-Item.c
 F1AP_LTMConfigurationIDMappingList.c
