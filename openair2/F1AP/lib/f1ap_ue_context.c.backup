@@ -847,7 +847,7 @@
  
      if (!it->iE_Extensions)
        continue;
-     const F1AP_ProtocolExtensionContainer_19016P83_t *ext = (const F1AP_ProtocolExtensionContainer_19016P83_t *)it->iE_Extensions;
+     const F1AP_ProtocolExtensionContainer_10696P83_t *ext = (const F1AP_ProtocolExtensionContainer_10696P83_t *)it->iE_Extensions;
      const F1AP_DRBs_ToBeSetupMod_ItemExtIEs_t *ie;
  
      for (int j = 0; j < ext->list.count; ++j) {
