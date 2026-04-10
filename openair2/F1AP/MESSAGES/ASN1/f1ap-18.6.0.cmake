@@ -639,6 +639,9 @@ F1AP_LTMCFRAResourceConfig.c
 F1AP_LTMCellSwitchInformation.c
 F1AP_LTMCells-ToBeReleased-Item.c
 F1AP_LTMCells-ToBeReleased-List.c
+F1AP_LTMConfigurationIDMappingList.c
+F1AP_LTMConfiguration.c
+F1AP_LTMIndicator.c
 F1AP_LTMInformation-Modify.c
 F1AP_LTMInformation-Setup.c
 F1AP_LTML2ResetConfiguration-Item.c
