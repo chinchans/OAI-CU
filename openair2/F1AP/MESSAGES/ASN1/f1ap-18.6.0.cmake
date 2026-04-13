@@ -635,8 +635,6 @@ F1AP_LTEUESidelinkAggregateMaximumBitrate.c
 F1AP_LTEV2XServicesAuthorized.c
 F1AP_LTMCFRAResourceConfig-Item.c
 F1AP_LTMCFRAResourceConfig-List.c
-F1AP_LTMCFRAResourceConfig.c
-F1AP_LTMCellSwitchInformation.c
 F1AP_LTMCells-ToBeReleased-Item.c
 F1AP_LTMCells-ToBeReleased-List.c
 F1AP_LTMConfigurationID.c
